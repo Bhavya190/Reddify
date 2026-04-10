@@ -1,5 +1,8 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { Hero } from "@/components/home/Hero";
+import { DecisionEngine } from "@/components/home/DecisionEngine";
+import { WhatWeDo } from "@/components/home/WhatWeDo";
+import { HowWeOperate } from "@/components/home/HowWeOperate";
 
 export const generateMetadata = () => constructMetadata(
   "Home",
@@ -10,10 +13,11 @@ export const generateMetadata = () => constructMetadata(
 
 export default function Home() {
   return (
-    <DemoPage 
-      title="Welcome to Reddify India" 
-      description="The ultimate Reddit marketing and strategy platform localized for the Indian market."
-      region="India"
-    />
+    <>
+      <Hero />
+      <DecisionEngine />
+      <WhatWeDo />
+      <HowWeOperate />
+    </>
   );
 }

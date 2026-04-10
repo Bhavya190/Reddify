@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getRegionalLink, getToggleLink } from '@/lib/navigation';
+import { ThemeToggle } from './ThemeToggle';
 
 const solutions = [
   { name: 'Account Optimization', href: '/solutions/reddit-account-optimization' },
@@ -86,7 +87,8 @@ export const Header: React.FC = () => {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <Link href={getToggleLink(pathname)} style={{ fontSize: '0.8rem', padding: '0.3rem 0.6rem', border: '1px solid var(--border)', borderRadius: '4px' }}>
+          <ThemeToggle />
+          <Link href={getToggleLink(pathname)} className="region-toggle" style={{ fontSize: '0.8rem', padding: '0.3rem 0.6rem', border: '1px solid var(--border)', borderRadius: '4px' }}>
             {pathname.startsWith('/us') ? '🇮🇳 India Version' : '🇺🇸 USA Version'}
           </Link>
           <Link href={getRegionalLink('/book-a-appointment', pathname)} className="btn-primary" style={{ fontSize: '0.9rem' }}>
