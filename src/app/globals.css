@@ -382,3 +382,124 @@ section {
 .trust-badge svg {
   color: #10b981; /* Green check */
 }
+
+/* About Us Layouts */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  padding: 4rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 4rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Pricing Layouts */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+
+@media (min-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pricing-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card.featured {
+  background: rgba(230, 46, 86, 0.05);
+  border-color: var(--primary);
+  box-shadow: 0 20px 25px -5px rgba(230, 46, 86, 0.1);
+}
+
+.pricing-pill {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  background: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.pricing-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  text-align: center;
+}
+
+.pricing-button.muted {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.pricing-button.muted:hover {
+  background: var(--border);
+}
+
+.pricing-button.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.pricing-button.primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}

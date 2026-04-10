@@ -1,5 +1,5 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { AboutCompany } from "@/components/pages/AboutCompany";
 
 export const generateMetadata = () => constructMetadata(
   "About Us",
@@ -8,6 +8,10 @@ export const generateMetadata = () => constructMetadata(
   "us"
 );
 
-export default function Page() {
-  return <DemoPage title="About Us" description="We are experts in Reddit community engagement (US team)." region="USA" />;
+export default function Home() {
+  return (
+    <div className="container">
+      <AboutCompany />
+    </div>
+  );
 }

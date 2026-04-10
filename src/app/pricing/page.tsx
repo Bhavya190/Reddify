@@ -1,5 +1,5 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { PricingTable } from "@/components/pricing/PricingTable";
 
 export const generateMetadata = () => constructMetadata(
   "Pricing",
@@ -9,5 +9,5 @@ export const generateMetadata = () => constructMetadata(
 );
 
 export default function Page() {
-  return <DemoPage title="Pricing Plans" description="Flexible pricing for brands of all sizes." region="India" />;
+  return <PricingTable />;
 }
