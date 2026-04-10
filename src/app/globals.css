@@ -311,3 +311,74 @@ section {
   position: relative;
   overflow: hidden;
 }
+
+/* Form & Appointment Layout */
+.split-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+@media (min-width: 1024px) {
+  .split-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.form-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--muted);
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--background);
+  box-shadow: 0 0 0 4px rgba(230, 46, 86, 0.1);
+}
+
+.textarea-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+.trust-badge svg {
+  color: #10b981; /* Green check */
+}
