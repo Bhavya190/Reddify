@@ -1,13 +1,13 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { SolutionDetails } from "@/components/pages/SolutionDetails";
 
 export const generateMetadata = () => constructMetadata(
-  "Reddit Engagement",
-  "High-quality engagement strategies for Reddit.",
+  "Community Engagement",
+  "Consistent community interaction at scale.",
   "/solutions/reddit-engagement",
   "in"
 );
 
 export default function Page() {
-  return <DemoPage title="Reddit Engagement" description="Authentic engagement services to build brand trust." region="India" />;
+  return <SolutionDetails slug="reddit-engagement" bookingLink="/book-a-appointment" />;
 }

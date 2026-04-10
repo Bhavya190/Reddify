@@ -1,13 +1,13 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { SolutionDetails } from "@/components/pages/SolutionDetails";
 
 export const generateMetadata = () => constructMetadata(
-  "Brand Presence Management",
-  "Maintain a consistent brand voice on Reddit (US).",
+  "Brand Presence",
+  "Build an authentic voice for your brand on Reddit in the US.",
   "/us/solutions/reddit-brand-presence",
   "us"
 );
 
 export default function Page() {
-  return <DemoPage title="Brand Presence Management" description="Professional stewardship of your brand's Reddit identity in the US." region="USA" />;
+  return <SolutionDetails slug="reddit-brand-presence" bookingLink="/us/book-a-appointment" />;
 }

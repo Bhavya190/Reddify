@@ -1,5 +1,5 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { SolutionDetails } from "@/components/pages/SolutionDetails";
 
 export const generateMetadata = () => constructMetadata(
   "Reddit Account Optimization",
@@ -9,5 +9,5 @@ export const generateMetadata = () => constructMetadata(
 );
 
 export default function Page() {
-  return <DemoPage title="Reddit Account Optimization" description="Strategic optimization for your Reddit profiles." region="India" />;
+  return <SolutionDetails slug="reddit-account-optimization" bookingLink="/book-a-appointment" />;
 }

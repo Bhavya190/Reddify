@@ -1,13 +1,13 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { SolutionDetails } from "@/components/pages/SolutionDetails";
 
 export const generateMetadata = () => constructMetadata(
-  "Buy Reddit Upvotes",
-  "Ethical upvote campaigns to boost visibility.",
+  "Strategic Upvotes",
+  "Drive visibility through organic upvoting networks.",
   "/solutions/reddit-upvotes",
   "in"
 );
 
 export default function Page() {
-  return <DemoPage title="Buy Reddit Upvotes" description="Get the visibility your content deserves with strategic upvotes." region="India" />;
+  return <SolutionDetails slug="reddit-upvotes" bookingLink="/book-a-appointment" />;
 }

@@ -1,13 +1,13 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { SolutionDetails } from "@/components/pages/SolutionDetails";
 
 export const generateMetadata = () => constructMetadata(
-  "Reddit Sentiment Analysis",
-  "Understand what Reddit says about your brand.",
+  "Sentiment Analysis",
+  "Deep-dive into community sentiment and brand health.",
   "/solutions/reddit-sentiment-analysis",
   "in"
 );
 
 export default function Page() {
-  return <DemoPage title="Reddit Sentiment Analysis" description="AI-driven sentiment tracking for your brand." region="India" />;
+  return <SolutionDetails slug="reddit-sentiment-analysis" bookingLink="/book-a-appointment" />;
 }
