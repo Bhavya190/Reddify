@@ -3,17 +3,17 @@ import { DemoPage } from "@/components/pages/DemoPage";
 
 export const generateMetadata = () => constructMetadata(
   "Home",
-  "Optimize your brand presence on Reddit with Reddify.",
-  "/",
-  "in"
+  "Optimize your brand presence on Reddit with Reddify US.",
+  "/us",
+  "us"
 );
 
 export default function Home() {
   return (
     <DemoPage 
-      title="Welcome to Reddify India" 
-      description="The ultimate Reddit marketing and strategy platform localized for the Indian market."
-      region="India"
+      title="Welcome to Reddify USA" 
+      description="The ultimate Reddit marketing and strategy platform localized for the US market."
+      region="USA"
     />
   );
 }
