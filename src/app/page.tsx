@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { DecisionEngine } from "@/components/home/DecisionEngine";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { HowWeOperate } from "@/components/home/HowWeOperate";
+import { PricingTable } from "@/components/pricing/PricingTable";
 
 export const generateMetadata = () => constructMetadata(
   "Home",
@@ -18,6 +19,7 @@ export default function Home() {
       <DecisionEngine />
       <WhatWeDo />
       <HowWeOperate />
+      <PricingTable />
     </>
   );
 }

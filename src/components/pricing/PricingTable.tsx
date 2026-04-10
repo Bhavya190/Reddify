@@ -52,7 +52,7 @@ const plans = [
 
 export const PricingTable: React.FC = () => {
   return (
-    <section style={{ padding: '6rem 0' }}>
+    <section id="packages" style={{ padding: '6rem 0' }}>
       <div className="container" style={{ textAlign: 'center' }}>
         <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, marginBottom: '1rem' }}>
           Choose Your Package
