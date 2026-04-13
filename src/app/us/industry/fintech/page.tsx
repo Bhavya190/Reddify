@@ -1,5 +1,5 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { IndustryDetails } from "@/components/pages/IndustryDetails";
 
 export const generateMetadata = () => constructMetadata(
   "Reddit for FinTech",
@@ -9,5 +9,5 @@ export const generateMetadata = () => constructMetadata(
 );
 
 export default function Page() {
-  return <DemoPage title="Reddit for FinTech" description="Building trust and transparency in US finance subreddits." region="USA" />;
+  return <IndustryDetails slug="fintech" bookingLink="/us/book-a-appointment" />;
 }

@@ -1,5 +1,5 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { IndustryDetails } from "@/components/pages/IndustryDetails";
 
 export const generateMetadata = () => constructMetadata(
   "Reddit for Health & Wellness",
@@ -9,5 +9,5 @@ export const generateMetadata = () => constructMetadata(
 );
 
 export default function Page() {
-  return <DemoPage title="Reddit for Health & Wellness" description="Empathetic engagement in wellness-focused communities." region="India" />;
+  return <IndustryDetails slug="health-wellness" bookingLink="/book-a-appointment" />;
 }
