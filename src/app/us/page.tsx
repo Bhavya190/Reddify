@@ -4,6 +4,7 @@ import { DecisionEngine } from "@/components/home/DecisionEngine";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { HowWeOperate } from "@/components/home/HowWeOperate";
 import { PricingTable } from "@/components/pricing/PricingTable";
+import { FAQ } from "@/components/home/FAQ";
 
 export const generateMetadata = () => constructMetadata(
   "Home",
@@ -20,6 +21,7 @@ export default function Home() {
       <WhatWeDo />
       <HowWeOperate />
       <PricingTable />
+      <FAQ />
     </>
   );
 }

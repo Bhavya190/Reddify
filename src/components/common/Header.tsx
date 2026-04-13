@@ -89,7 +89,7 @@ export const Header: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <ThemeToggle />
           <Link href={getToggleLink(pathname)} className="region-toggle" style={{ fontSize: '0.8rem', padding: '0.3rem 0.6rem', border: '1px solid var(--border)', borderRadius: '4px' }}>
-            {pathname.startsWith('/us') ? '🇮🇳 India Version' : '🇺🇸 USA Version'}
+            {pathname.startsWith('/us') ? 'INDIA' : 'USA'}
           </Link>
           <Link href={getRegionalLink('/book-a-appointment', pathname)} className="btn-primary" style={{ fontSize: '0.9rem' }}>
             Book Appointment
