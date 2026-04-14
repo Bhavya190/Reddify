@@ -1,13 +1,13 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { BlogLanding } from "@/components/pages/BlogLanding";
 
 export const generateMetadata = () => constructMetadata(
-  "Our Blog",
-  "Insights and guides on Reddit marketing.",
+  "Reddify Blog",
+  "Expert tips and strategies for Reddit marketing and community growth.",
   "/blogs",
   "in"
 );
 
 export default function Page() {
-  return <DemoPage title="Reddify Blog" description="Expert tips and strategies for Reddit communities." region="India" />;
+  return <BlogLanding region="India" />;
 }

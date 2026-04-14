@@ -13,13 +13,13 @@ const footerData = {
     { name: 'Engagement', href: '/solutions/reddit-engagement' },
     { name: 'Growth Campaigns', href: '/solutions/reddit-growth-campaigns' },
   ],
-  industry: [
-    { name: 'SaaS', href: '/industry/saas' },
-    { name: 'D2C', href: '/industry/d2c' },
-    { name: 'B2B', href: '/industry/b2b' },
-    { name: 'FinTech', href: '/industry/fintech' },
-    { name: 'Health & Wellness', href: '/industry/health-wellness' },
-  ],
+  // industry: [
+  //   { name: 'SaaS', href: '/industry/saas' },
+  //   { name: 'D2C', href: '/industry/d2c' },
+  //   { name: 'B2B', href: '/industry/b2b' },
+  //   { name: 'FinTech', href: '/industry/fintech' },
+  //   { name: 'Health & Wellness', href: '/industry/health-wellness' },
+  // ],
   company: [
     { name: 'About Us', href: '/about-us' },
     { name: 'Pricing', href: '/pricing' },
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 style={{ marginBottom: '1.5rem', fontSize: '1rem' }}>Industries</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.9rem', color: 'var(--muted-foreground)' }}>
               {footerData.industry.map(link => (
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h4 style={{ marginBottom: '1.5rem', fontSize: '1rem' }}>Company</h4>

@@ -1,6 +1,8 @@
 import { constructMetadata } from "@/lib/seo";
-import { DemoPage } from "@/components/pages/DemoPage";
+import { BlogDetail } from "@/components/pages/BlogDetail";
+import { blogsData } from "@/lib/blogs_data";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -8,9 +10,12 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const post = blogsData.find(b => b.slug === slug);
+  if (!post) return constructMetadata("Post Not Found", "", "", "in");
+
   return constructMetadata(
-    `Blog: ${slug}`,
-    `Read more about ${slug} on our blog.`,
+    post.title,
+    post.description,
     `/blogs/${slug}`,
     "in"
   );
@@ -18,5 +23,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  return <DemoPage title={`Blog: ${slug}`} description={`Insights and strategies about ${slug}.`} region="India" />;
+  const post = blogsData.find(b => b.slug === slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  return <BlogDetail post={post} />;
+}
+
+export function generateStaticParams() {
+  return blogsData.map((post) => ({
+    slug: post.slug,
+  }));
 }

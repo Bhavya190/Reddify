@@ -7,27 +7,27 @@ import { getRegionalLink, getToggleLink } from '@/lib/navigation';
 import { ThemeToggle } from './ThemeToggle';
 
 const solutions = [
-  { name: 'Account Optimization', href: '/solutions/reddit-account-optimization' },
+  // { name: 'Account Optimization', href: '/solutions/reddit-account-optimization' },
   { name: 'Sentiment Analysis', href: '/solutions/reddit-sentiment-analysis' },
-  { name: 'Reddit Posting', href: '/solutions/reddit-posting' },
+  // { name: 'Reddit Posting', href: '/solutions/reddit-posting' },
   { name: 'Brand Presence', href: '/solutions/reddit-brand-presence' },
-  { name: 'Content Engineering', href: '/solutions/reddit-content-thread-engineering' },
+  // { name: 'Content Engineering', href: '/solutions/reddit-content-thread-engineering' },
   { name: 'Growth Campaigns', href: '/solutions/reddit-growth-campaigns' },
   { name: 'SEO & GEO Insights', href: '/solutions/reddit-insights-seo-geo' },
   { name: 'Analytics & Reporting', href: '/solutions/reddit-analytics-reporting' },
-  { name: 'Reddit Engagement', href: '/solutions/reddit-engagement' },
-  { name: 'Reddit Upvotes', href: '/solutions/reddit-upvotes' },
+  // { name: 'Reddit Engagement', href: '/solutions/reddit-engagement' },
+  // { name: 'Reddit Upvotes', href: '/solutions/reddit-upvotes' },
   { name: 'Reddit Commenting', href: '/solutions/reddit-commenting' },
 ];
 
-const industries = [
-  { name: 'SaaS', href: '/industry/saas' },
-  { name: 'D2C', href: '/industry/d2c' },
-  { name: 'B2B', href: '/industry/b2b' },
-  { name: 'Health & Wellness', href: '/industry/health-wellness' },
-  { name: 'FinTech', href: '/industry/fintech' },
-  { name: 'B2C', href: '/industry/b2c' },
-];
+// const industries = [
+//   { name: 'SaaS', href: '/industry/saas' },
+//   { name: 'D2C', href: '/industry/d2c' },
+//   { name: 'B2B', href: '/industry/b2b' },
+//   { name: 'Health & Wellness', href: '/industry/health-wellness' },
+//   { name: 'FinTech', href: '/industry/fintech' },
+//   { name: 'B2C', href: '/industry/b2c' },
+// ];
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
             </div>
 
             {/* Industry Dropdown */}
-            <div className="dropdown-container">
+            {/* <div className="dropdown-container">
               <div className="dropdown-trigger" style={{ fontWeight: 500, color: pathname.includes('/industry') ? 'var(--primary)' : 'inherit' }}>
                 Industries
               </div>
@@ -75,10 +75,16 @@ export const Header: React.FC = () => {
                   </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <Link href={getRegionalLink('/pricing', pathname)} style={{ display: 'flex', alignItems: 'center', fontWeight: 500, color: pathname.includes('/pricing') ? 'var(--primary)' : 'inherit' }}>
               Pricing
+            </Link>
+            <Link href={getRegionalLink('/industry-insights', pathname)} style={{ display: 'flex', alignItems: 'center', fontWeight: 500, color: pathname.includes('/industry-insights') ? 'var(--primary)' : 'inherit' }}>
+              Insights
+            </Link>
+            <Link href={getRegionalLink('/blogs', pathname)} style={{ display: 'flex', alignItems: 'center', fontWeight: 500, color: pathname.includes('/blogs') ? 'var(--primary)' : 'inherit' }}>
+              Blogs
             </Link>
             <Link href={getRegionalLink('/about-us', pathname)} style={{ display: 'flex', alignItems: 'center', fontWeight: 500, color: pathname.includes('/about-us') ? 'var(--primary)' : 'inherit' }}>
               About
